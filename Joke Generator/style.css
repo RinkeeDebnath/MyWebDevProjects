@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", Courier, monospace;
+  font-size: 20px;
+  width: 100vw;
+  height: 100vh;
+  background-color: #cbf078;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#container {
+  max-width: 95%;
+  width: 800px;
+  max-height: 95%;
+  height: 500px;
+  background-color: white;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+strong {
+  color: #596e79;
+  text-align: center;
+  text-decoration: underline;
+}
+
+#joke {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
+}
+#joke p {
+  color: #2c5d63;
+  margin: 20px 0px;
+  text-wrap: wrap;
+}
+
+button {
+  background-color: #f70776;
+  color: white;
+  font-size: 14px;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 0.5%;
+  border: 1px solid #f70776;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.1s;
+}
+
+button:hover {
+  background-color: #c3195d;
+}
+button:active {
+  background-color: maroon;
+}
