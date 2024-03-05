@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url(night-forest.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  line-height: 1;
+}
+
+#container {
+  width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  height: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1 {
+  padding-bottom: 45px;
+  color: #fff;
+  text-decoration: underline;
+  text-underline-offset: 10px;
+}
+
+.glass {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.1),
+    rgba(255, 255, 255, 0)
+  );
+  backdrop-filter: blur(10%);
+  -webkit-backdrop-filter: blur(10%);
+  border-radius: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+#password-input,
+#password-length {
+  width: 95%;
+  font-size: 18px;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+
+#password-length {
+  border-right: 10px solid #fff;
+}
+
+#passwordBtn {
+  background-color: #ed2b2a;
+  width: 95%;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+#passwordBtn:hover {
+  background-color: #82cd47;
+}
+
+#passwordBtn:active {
+  background-color: darkgreen;
+}
