@@ -1,23 +1,48 @@
-function generatePassword(value) {
+function generatePassword(userPwdLength) {
   const char = "abcdefghijklmnopqrstuvwxyz";
   const digits = "0123456789";
   const spclChar = "#$%^&()@?/";
-  const keys = `${char}${digits}${char.toUpperCase()}${spclChar}}`;
+  const keys = [char, digits, spclChar, char.toUpperCase()];
 
-  let password = "";
-  while (password.length !== value) {
-    password += keys.charAt(Math.floor(Math.random() * (keys.length - 1) + 1));
+  let pwd = "";
+
+  while (pwd.length < userPwdLength) {
+    keys.forEach((key) => {
+      if (pwd.length < userPwdLength) {
+        pwd += key.charAt(Math.floor(Math.random() * (key.length - 1) + 1));
+      }
+    });
   }
-  return password;
+  return pwd;
 }
 
 const showPassword = () => {
-  const passwordLength = parseInt(
-    document.getElementById("password-length").value
-  );
-  document.getElementById("password-input").value =
-    generatePassword(passwordLength);
-  document.querySelector("button").textContent = " Get New Password";
+  const pwdLength = parseInt(document.getElementById("pwd-len").value);
+  if (pwdLength !== 0) {
+    document.getElementById("pwd-input").value = generatePassword(pwdLength);
+    document.querySelector("button").textContent = " Generate New Password";
+  } else {
+    showPopPup("Please select length of your password !");
+  }
 };
 
-document.getElementById("passwordBtn").addEventListener("click", showPassword);
+const copyPassword = () => {
+  let copiedPwd = document.getElementById("pwd-input");
+  copiedPwd.select();
+  if (copiedPwd.value) {
+    navigator.clipboard.writeText(copiedPwd.value);
+    showPopPup("Password Copied !");
+  }
+};
+
+function showPopPup(msg) {
+  let popUp = document.getElementById("pop-up");
+  popUp.textContent = msg;
+  popUp.style.transform = "translateX(-5px)";
+  setTimeout(() => {
+    popUp.style.transform = "translateX(500px)";
+  }, 3000);
+}
+
+document.getElementById("pwdBtn").addEventListener("click", showPassword);
+document.getElementById("pwd-input").addEventListener("click", copyPassword);

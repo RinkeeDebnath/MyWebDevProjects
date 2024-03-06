@@ -7,22 +7,25 @@
     <link rel="stylesheet" href="./style.css" />
   </head>
   <body>
-    <div id="container" class="glass">
+    <div class="container glass">
+      <div class="pop-up" id="pop-up"></div>
       <h1>Password Generator</h1>
 
       <input
         type="text"
-        id="password-input"
+        class="same-size"
+        id="pwd-input"
         placeholder="Password coming up!"
+        readonly
       />
-      <select id="password-length">
-        <option value="pass" disabled>Select length of your password</option>
+      <select class="same-size border-ryt light-color" id="pwd-len">
+        <option value="0">Select length of your password</option>
         <option value="6">6</option>
         <option value="9">9</option>
         <option value="12">12</option>
         <option value="15">15</option>
       </select>
-      <button id="passwordBtn">Get Password</button>
+      <button id="pwdBtn">Generate Password</button>
     </div>
 
     <script src="./script.js"></script>
