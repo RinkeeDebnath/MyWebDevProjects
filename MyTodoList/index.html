@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo List</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header center">
+        <h1>My Todo List</h1>
+      </header>
+      <form class="form-input form-content space-btw">
+        <input
+          type="text"
+          class="note-txt-input"
+          placeholder="Please enter your note"
+        />
+        <button class="submit"><i class="bx bx-plus bx-sm"></i></button>
+      </form>
+      <div class="filter center">
+        <input
+          type="text"
+          class="filter-input"
+          placeholder="Enter note to be filtered"
+        />
+      </div>
+      <div id="todo-notes">
+        <ul class="notes-list" type="none">
+          <!-- <li class=" note space-btw">
+            <button class="uncheck"><i class="bx bx-square bx-sm"></i></button>
+            Buy milk
+            <button class="cross"><i class='bx bx-x bx-sm bx-sm'></i></i></button>
+          </li> -->
+        
+        </ul>
+      </div>
+      <div id="completed-notes">
+        <ul class="completed-notes-list" type="none">
+          <!-- <li class="space-btw txt-linethrough">
+            <button class="check"><i class="bx bx-check-square bx-sm"></i></button>
+            Watch movie
+            <button class="cross"><i class="bx bx-x bx-sm"></i></i></button>
+          </li>
+          <li class="space-btw txt-linethrough">
+            <button class="check"><i class="bx bx-check-square bx-sm"></i></button>
+            Take a nap
+            <button class="cross"><i class="bx bx-x bx-sm"></i></i></button>
+          </li> -->
+          <!-- <li class="space-btw txt-linethrough">
+            <button class="check"><i class="bx bx-check-square bx-sm bx-sm"></i></button>
+            Play video gamess
+            <button class="cross"><i class='bx bx-x bx-sm'></i></i></button>
+          </li> -->
+        </ul>
+      </div>
+      <div class="clear-all center">
+        <button class="reset-btn">RESET</button>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
